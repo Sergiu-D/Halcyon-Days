@@ -1,8 +1,10 @@
+//Navigation
+
 .main-nav{
     display: flex;
     justify-content: center;
     width: 100%;
-    background-color: var(--dark-bg-color);
+    background-color: $dark-bg-color;
 
     position: absolute;    
     transition: all .5s ease-out;
@@ -29,9 +31,11 @@
     }
 
     li:hover a, li:hover i{
-        color: var(--white);
+        color: $white;
     }
 }
+
+// Adding transform property to wrapper 
 
 .wrapper{
     position: relative;
@@ -43,9 +47,10 @@
     transform: translateY(345.8px);
 }
 
+// Hero Section
+
 .hero{
     height: 80vh;
-    justify-content: center;
 
     position: relative;
     background-image: url(/img/hero-bg.jpg);
@@ -77,8 +82,7 @@
             left: 50%;
             transform: translate(-50%, -50%);
             
-            
-            background: var(--header-color);
+            background: $header-color;
             border-radius: 5px;
             transition: all .5s ease;
         }
@@ -87,7 +91,7 @@
             content: "";
             height: 5px;
             width: 35px;
-            background-color: var(--header-color);
+            background-color: $header-color;
             border-radius: 5px;
             transition: all .5s ease;
         }
@@ -114,7 +118,7 @@
     }
 
 
-    // Content
+    // Hero Content
 
     &__content{
         width: $container-width;
@@ -133,6 +137,26 @@
 
         &-btn{
             margin-top: 5rem;
+            padding: $btn-padding;
+            background-color: $primary-component-color;
+            border-radius: 5px;
+            border-bottom: 3px solid #309383;
+            cursor: pointer;
         }
+
+        &-btn:hover{
+            background-color: rgba($primary-component-color, .7);
+        }
+    }
+}
+
+
+// Introduction Section
+.introduction{
+    
+    &__container{
+        width: $container-width;
+        text-align: center;
+        padding: $container-padding;
     }
 }

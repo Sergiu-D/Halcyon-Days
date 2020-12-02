@@ -1,5 +1,5 @@
 h1,h2,h3{
-    color: var(--header-color);
+    color: $header-color;
 }
 
 h1{
@@ -9,22 +9,41 @@ h1{
 }
 
 h1 span{
-    color: var(--span-h-color);
+    color: $span-h-color;
 }
 
 h2, h3{
     font-size: 1.5rem;
     font-weight: bold;
     text-transform: uppercase;
+    margin: 1rem 0;
+    padding-bottom: 3rem;
+}
+
+h2:after{
+    display: block;
+    content: url(/img/h1-bg.png);
+    text-align: center;
+    width: 100%;
+    margin-top: 5px;
+}
+h3::after{
+    content: "";
+    display: block;
+    width: 3.5rem;
+    border: 2px solid $primary-component-color;
+    background-color: $primary-component-color;
+    margin: 2.5px auto;
 }
 
 p{
     font-size: 1.4rem;
-    color: var(--paragraph-color);
+    line-height: 2.5rem;
+    color: $paragraph-color;
 }
 a{
     text-decoration: none;
-    color: black;
+    text-transform: uppercase;
     font-size: 1.4rem;
-    // color: var(--white);
+    color: $white;
 }
