@@ -1,0 +1,138 @@
+.main-nav{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--dark-bg-color);
+
+    position: absolute;    
+    transition: all .5s ease-out;
+
+    ul{
+    list-style: none; 
+    }
+
+    li{
+        width: 70vw;
+        display: flex;
+        justify-content: space-between;
+        padding: 2rem 0;
+        cursor: pointer;
+
+        &:not(:last-child){
+            border-bottom: 1px dotted rgba(255, 255, 255, 0.2);
+        }
+        
+        a, i{
+            
+            color: rgba(255, 255, 255, 0.6);
+        }   
+    }
+
+    li:hover a, li:hover i{
+        color: var(--white);
+    }
+}
+
+.wrapper{
+    position: relative;
+    transform: translateY(0);
+    transition: transform .5s ease-out;
+}
+
+.wrapper.active{
+    transform: translateY(345.8px);
+}
+
+.hero{
+    height: 80vh;
+    justify-content: center;
+
+    position: relative;
+    background-image: url(/img/hero-bg.jpg);
+    background-size: cover;
+
+    // Navigation Button
+    .nav-btn-container{
+        display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        width: 100%;
+        height: 50px;
+
+        #nav-btn{
+            position: relative;
+            height: 35px;
+            width: 35px;
+            // right: 20px;
+            // top: 20px;
+            cursor: pointer;
+        }
+
+        &__line{
+            position: absolute;
+            width: 35px;
+            height: 5px;
+
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            
+            
+            background: var(--header-color);
+            border-radius: 5px;
+            transition: all .5s ease;
+        }
+        &__line::after, &__line::before{
+            position: absolute;
+            content: "";
+            height: 5px;
+            width: 35px;
+            background-color: var(--header-color);
+            border-radius: 5px;
+            transition: all .5s ease;
+        }
+
+        &__line::after{
+            transform: translateY(10px);
+        }
+
+        &__line::before{
+            transform: translateY(-10px);
+        }
+
+        &__line.active{
+            transform: rotate(-45deg) translateX(-2px);
+        }
+
+        &__line.active::after{
+            transform: rotate(90deg);
+        }
+
+        &__line.active::before{
+            opacity: 0;
+        }
+    }
+
+
+    // Content
+
+    &__content{
+        width: $container-width;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 6.5rem;
+
+        &-title{
+            margin-top: 15rem;
+        }
+
+        &-paragraph{
+            margin: $small-margin 0;
+        }
+
+        &-btn{
+            margin-top: 5rem;
+        }
+    }
+}

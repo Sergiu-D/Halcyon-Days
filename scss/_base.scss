@@ -1,0 +1,33 @@
+:root{
+    --header-color: #363636;
+
+    --span-h-color: #A1A9B0;
+    --paragraph-color: #8C9398;
+
+    --light-bg-color: #F3F5F8;
+    --dark-bg-color: #242830;
+
+    --primary-component-color: #3EC9B3;
+    --white: #ffff;
+}
+
+$container-width: 65%;
+$small-margin: 1.5rem;
+
+html{
+    font-family: 'Varela Round', sans-serif;
+    font-size: 62.5%;
+}
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// Text Colors
+
+// main font color : #363636
+// secondary font color: #A1A9B0
+// h2 font color: #E7EAF0
+// p font color: #8C9398;
