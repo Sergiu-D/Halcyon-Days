@@ -28,7 +28,11 @@ h2, h3 {
   font-size: 1.5rem;
   font-weight: bold;
   text-transform: uppercase;
-  margin: 1rem 0;
+  margin: 1.2rem 0;
+  letter-spacing: 1px;
+}
+
+h2 {
   padding-bottom: 3rem;
 }
 
@@ -37,7 +41,7 @@ h2:after {
   content: url(/img/h1-bg.png);
   text-align: center;
   width: 100%;
-  margin-top: 5px;
+  margin-top: 1.5rem;
 }
 
 h3::after {
@@ -46,13 +50,14 @@ h3::after {
   width: 3.5rem;
   border: 2px solid #3EC9B3;
   background-color: #3EC9B3;
-  margin: 2.5px auto;
+  margin: 2.5rem auto;
 }
 
 p {
   font-size: 1.4rem;
   line-height: 2.5rem;
   color: #8C9398;
+  letter-spacing: 1px;
 }
 
 a {
@@ -60,6 +65,7 @@ a {
   text-transform: uppercase;
   font-size: 1.4rem;
   color: #ffff;
+  letter-spacing: 1px;
 }
 
 header, section, footer {
@@ -246,9 +252,55 @@ header, section, footer {
   background-color: rgba(62, 201, 179, 0.7);
 }
 
+.introduction {
+  background-color: #F3F5F8;
+}
+
 .introduction__container {
   width: 65%;
   text-align: center;
   padding: 9rem 0;
+}
+
+.features__container {
+  width: 65%;
+  padding: 9rem 0;
+  text-align: center;
+}
+
+.features__cards-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.features__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.features__card-icon {
+  position: relative;
+  width: 17rem;
+  height: 17rem;
+  background-color: #3EC9B3;
+  border-radius: 50%;
+  margin: 0 auto 5rem;
+}
+
+.features__card-icon i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 4rem;
+  color: #ffff;
+  text-shadow: #37b5a1 1px 1px, #37b5a1 2px 2px, #37b5a1 3px 3px, #37b5a1 4px 4px, #37b5a1 5px 5px, #37b5a1 6px 6px, #37b5a1 7px 7px, #37b5a1 8px 8px, #37b5a1 9px 9px, #37b5a1 10px 10px, #37b5a1 11px 11px, #37b5a1 12px 12px, #37b6a2 13px 13px, #37b7a3 14px 14px, #38b8a4 15px 15px, #38b9a5 16px 16px, #38baa6 17px 17px, #39bba7 18px 18px, #39bca8 19px 19px, #39bda9 20px 20px, #3abfaa 21px 21px, #3ac0ab 22px 22px, #3ac1ac 23px 23px, #3bc2ad 24px 24px, #3bc3ae 25px 25px, #3bc4af 26px 26px, #3cc5b0 27px 27px, #3cc6b1 28px 28px, #3cc7b2 29px 29px, #3dc9b3 30px 30px;
 }
 /*# sourceMappingURL=main.css.map */
