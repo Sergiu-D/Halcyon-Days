@@ -284,3 +284,81 @@
         }
     }
 }
+
+.portfolio{
+
+    &__cards{
+        display: flex;
+        width: $container-width;
+        padding: $container-padding;
+
+        &-card{
+            position: relative;
+            text-align: center;
+        }
+
+        &-img{
+            position: relative;
+            width: 36rem;
+            margin: 0 auto;
+            margin-bottom: $small-margin;
+            overflow: hidden;
+            transition: all .3s;
+
+            img{
+                width: 36rem;
+                transition: all .3s;
+                z-index: 1;
+            }
+
+            &-overlay{
+                width: fit-content;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                font-size: 4rem;
+                color: white;
+                opacity: 0;
+                transition: all .3s;
+                cursor: pointer;
+
+                span{
+                    font-size: 2rem;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        // &-img:hover{
+        //     background-color: rgba($primary-component-color, .9);
+        //     z-index: 5;
+        // }
+
+        &-img:hover img{
+            transform: scale(1.1);
+            background: linear-gradient($primary-component-color $primary-component-color);
+        }
+
+        //TODO image green overlay
+
+        &-img:hover img::after{
+            content: "";
+            height: 100%;
+            border: 2px solid transparent;
+            background-color: rgba($primary-component-color, .9);   
+        }
+
+        &-img:hover .portfolio__cards-img-overlay{
+            opacity: 1;
+        }
+
+
+    }
+
+    &__cta{
+
+    }
+}
