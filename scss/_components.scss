@@ -199,3 +199,88 @@
         }
     }
 }
+
+// Design section
+
+.design{
+    &__top{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        &-img{
+            
+            background-color: $light-bg-color;
+            overflow: hidden;
+            flex: 1;
+            img{
+                transform: translateX(13%);
+            }
+        }
+
+        &-container{
+            flex: 1;
+        }
+        // TODO fix slider
+
+        &-content{
+            display: flex;
+            align-items: center;
+            margin-left: 8rem;
+            text-align: center;
+
+            p{
+                margin-top: $small-margin;
+            }
+        }
+
+        &-slide{
+            width: 400px;
+        }
+    }
+
+    &__bottom{
+        width: 100%;
+        background: url(/img/plants-bg.jpg);
+        background-size: cover;
+        background-position: center;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h1{
+            margin-top: 5rem;
+            font-weight: 400;
+            color: $white;
+        }
+        span{
+            display: block;
+            font-size: 2.5rem;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: white;
+            margin-top: $small-margin;
+        }
+
+        &-arrow{
+            position: relative;
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            background-color: rgba($primary-component-color, .8);
+            margin: 5rem 0;
+            transition: background-color .2s linear;
+
+            i{
+                position: absolute;
+                font-size: 2rem;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        &-arrow:hover{
+            background-color: $primary-component-color;
+        }
+    }
+}

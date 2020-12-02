@@ -11,6 +11,10 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
 
+    <!-- Swiper stylesheet -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
     <!-- CSS import -->
     <link rel="stylesheet" href="main.css">
     <title>Halcyon Days</title>
@@ -88,20 +92,41 @@
         
         <section class="design">
             <div class="design__top">
-                <img src="img/iphone-bg.png" alt="iphone img">
-        
-                <div class="design__top-content">
-                    <h2>RESPONSIVE DESIGN SPECIALISTS</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.
-                    </p>
-                    <p>
-                        Mauris ultrices odio vitae nulla ultrices iaculis. Nulla rhoncus odio eu lectus faucibus facilisis. Maecenas ornare augue vitae sollicitudin accumsan.
-                    </p>
-                    <p>
-                        Etiam eget libero et erat eleifend consectetur a nec lectus. Sed id tellus lorem. Suspendisse sed venenatis odio, quis lobortis eros.
-                    </p>
-                </div>
+               
+                    <div class="design__top-img">
+                        <img src="img/iphone-bg.png" alt="iphone img">
+                    </div>
+
+                <div class="design__top-container swiper-container">   
+                    <div class="design__top-content swiper-wrapper">
+                        <div class="design__top-slide swiper-slide">
+                            <h2>RESPONSIVE DESIGN SPECIALISTS</h2>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.
+                            </p>
+                            <p>
+                                Mauris ultrices odio vitae nulla ultrices iaculis. Nulla rhoncus odio eu lectus faucibus facilisis. Maecenas ornare augue vitae sollicitudin accumsan.
+                            </p>
+                            <p>
+                                Etiam eget libero et erat eleifend consectetur a nec lectus. Sed id tellus lorem. Suspendisse sed venenatis odio, quis lobortis eros.
+                            </p>
+                        </div>
+                        <div class="design__top-slide swiper-slide">
+                            <h2>RESPONSIVE DESIGN SPECIALISTS</h2>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.
+                            </p>
+                            <p>
+                                Mauris ultrices odio vitae nulla ultrices iaculis. Nulla rhoncus odio eu lectus faucibus facilisis. Maecenas ornare augue vitae sollicitudin accumsan.
+                            </p>
+                            <p>
+                                Etiam eget libero et erat eleifend consectetur a nec lectus. Sed id tellus lorem. Suspendisse sed venenatis odio, quis lobortis eros.
+                            </p>
+                        </div>
+                        
+                    </div>
+                    <div class="swiper-pagination"></div>
+               </div>
             </div>
             <div class="design__bottom">
                 <h1>i got 99 problems</h1>
@@ -223,6 +248,9 @@
         </footer>
     </div>
 
+    <!-- Swiper -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <script src="index.js"></script>
 </body>

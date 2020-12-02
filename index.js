@@ -9,3 +9,36 @@ navBtn.addEventListener("click", () => {
     navBtnLine.classList.toggle("active");
     wrapper.classList.toggle("active");
 })
+
+
+// Carusel
+
+var mySwiper = new Swiper('.swiper-container', {
+    // Optional parameters
+    direction: 'horizontal',
+    speed: 800,
+    autoHeight: true,
+
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      progressbarOpposite: true,
+    },
+
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+    }
+  
+    // // Navigation arrows
+    // navigation: {
+    //   nextEl: '.swiper-button-next',
+    //   prevEl: '.swiper-button-prev',
+    // },
+  
+    // // And if we need scrollbar
+    // scrollbar: {
+    //   el: '.swiper-scrollbar',
+    // },
+  })
